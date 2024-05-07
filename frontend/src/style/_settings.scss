@@ -1,0 +1,46 @@
+// file to init theme, root variables and font styles
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+iframe {
+    display: none; // supprime ecran rouge en development mode
+}
+
+.leaflet-top.leaflet-left {
+    display: none !important;
+}
+
+#components-dropdown-demo-arrow-center .ant-btn {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.ant-row-rtl #components-dropdown-demo-arrow-center .ant-btn {
+    margin-right: 0;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+@media (max-width: 992px) {
+    .ant-picker-panel:last-child .ant-picker-date-panel {
+        display: none !important;
+    }
+
+    .ant-picker-panel:first-child .ant-picker-date-panel .ant-picker-header-next-btn,
+    .ant-picker-panel:first-child .ant-picker-date-panel .ant-picker-header-super-next-btn {
+        visibility: initial !important;
+    }
+
+    .ant-picker-panel.ant-picker-range-wrapper {
+        min-width: 288px !important;
+    }
+
+    .ant-picker-presets {
+        display: none !important;
+    }
+}

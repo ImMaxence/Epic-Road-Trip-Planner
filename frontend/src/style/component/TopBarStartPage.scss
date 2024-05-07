@@ -1,0 +1,134 @@
+.search_bar_card_travel.floatingNav2 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 5px 0px;
+    transition: all 0.5s ease;
+}
+
+.sticky_fix {
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .init_header_topnav.floatingNav {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: all 0.5s ease;
+        //background-color: red;
+    }
+
+    .init_header_topnav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+
+        .logo_topnav {
+            width: 400px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                width: 45px;
+            }
+
+            .title {
+                margin-top: 10px;
+            }
+        }
+
+        .avatar_top_bar {
+            // width: 100px;
+            //height: 20px;
+            //background-color: red;
+            // float: right;
+            position: absolute;
+            right: 0;
+            margin-right: 30px;
+        }
+
+        .username {
+            margin-right: 10px;
+        }
+
+        .responsive_top_bar {
+            display: none;
+        }
+    }
+}
+
+.responsive_btn_login {
+    // background-color: red;
+    padding: 20px;
+    text-align: center !important;
+}
+
+.form_log_in {
+    //  background-color: red;
+    width: 100% !important;
+}
+
+.center_login {
+    // background-color: red;
+    padding: 10px;
+    text-align: center;
+
+    :nth-child(1) {
+        color: gray;
+    }
+}
+
+.google_center_login {
+    //  background-color: red;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.force_right {
+    //background-color: red;
+    text-align: center;
+}
+
+@media (width <=992px) {
+
+    .resp_to_hidden {
+        display: none;
+    }
+
+    .sticky_fix {
+
+        width: 100%;
+        overflow-x: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+
+        .init_header_topnav {
+            //position: relative;
+            //background-color: red;
+            width: 120% !important;
+
+            .logo_topnav {
+                position: absolute;
+                left: 0;
+                margin-left: 15px;
+            }
+
+            .responsive_item {
+                display: none;
+            }
+
+
+            .username {
+                margin-right: 10px;
+            }
+
+            .responsive_top_bar {
+                display: block;
+                position: absolute;
+                right: 0;
+                margin-right: 15px;
+            }
+        }
+    }
+
+}

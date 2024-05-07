@@ -1,0 +1,16 @@
+.wrapper_team {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    gap: 30px;
+
+    margin: 60px 0;
+}
+
+@media (width <=1243px) {
+    .wrapper_team {
+        grid-template-columns: auto;
+    }
+}

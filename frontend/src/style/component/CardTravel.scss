@@ -1,0 +1,53 @@
+.cover_img {
+    width: 100%;
+    //background-color: red;
+    height: 220px;
+    overflow: hidden;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+
+    img {
+        width: 120%;
+        object-fit: cover;
+    }
+}
+
+.additional {
+
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like_btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.flex_card_trav {
+
+    display: flex;
+    justify-content: center;
+
+
+    .left_card {
+        //  background-color: red;
+        width: 50%;
+    }
+
+    .right_card {
+        // background-color: violet;
+        width: 50%;
+
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        span {
+            color: gray;
+        }
+    }
+}

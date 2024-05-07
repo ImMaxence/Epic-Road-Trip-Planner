@@ -1,0 +1,16 @@
+// import all css file here, this file is import in index.js
+
+@import "./settings";
+@import "./component/TopBarStartPage.scss";
+@import "./page/StartPage.scss";
+@import "./component/CardTravel.scss";
+@import "./component/Contributor.scss";
+@import "./page/Teammate.scss";
+@import "./page/Profile.scss";
+@import "./component/Footer.scss";
+@import "./component/Maps.scss";
+@import "./component/MenuMaps.scss";
+@import "./page/ContainerMaps.scss";
+@import "./page/Register.scss";
+@import "./page/ErrorPage.scss";
+@import "./page/AllTravel.scss";

@@ -1,0 +1,75 @@
+**L'utilisateur doit pouvoir** : 
+- saisir un (ou plusieurs) emplacements
+- affiner les résultats en fonction des dates|budget|zone|...
+- obtenir des suggestions sur les événements culturels et sportifs
+- obtenir des propositions d'hébergements|restaurants|bars|transports
+- visualiser plusieurs informations/événements sur une carte
+- obtenir des suggestions d'itinéraires entre deux points
+- obtenir une version imprimable des détails du voyage des utilisateurs, avec des cartes
+- enregistrez leur recherche pour la réutiliser ou la partager
+
+**API doit avoir les routes** :
+- enjoy(lieux, [dates, budjet, distance, ...]):
+    Liste les différents événements, activités.
+- sleep(lieux, [dates, budjet, distance, ...]):
+    Liste les différents hébergements.
+- travel(lieux, [dates, budjet, distance, ...]):
+    Liste les différents transports.
+- eat(lieux, [dates, budjet, distance, ...]):
+    Liste les différents restaurants.
+- drink(lieux, [dates, budjet, distance, ...]):
+    Liste les différents bars.
+
+ps: Il faut mieux définir les types de bars, restaurants, hébergements, ...
+
+**Microservices** :
+- Il faut trouver un/des sites webs qui vont nous fournir des données que l'on va afficher comme on veux
+
+**Tests unitaires** :
+- Rédactions des tests unitaires *AVANT* le développement avec Jasmine !
+
+**API Public** :
+- Documentation de notre API à l'aide de swagger et bien documenté ! 
+
+**CI/CD** :
+Tests unitaires et déploiement (à l'aide de l'outil Gulps ??)
+
+**UI/UX** : 
+Appli responsive
+
+
+netstat -an | grep "5000"
+macos 
+general > airplay > desactiver car prends le port 5000 qui est use par python dans docker
+
+env files
+
+.env.back
+ENDPOINT_API_PYTHON=
+MYSQL_HOST=
+MYSQL_DATABASE=
+MYSQL_USER=
+MYSQL_PASSWORD=
+
+env.front
+.REACT_APP_BACK_HOST=
+REACT_APP_BACK_PORT=
+
+.env.mariadb
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=
+MYSQL_USER=
+MYSQL_PASSWORD=
+
+env.phpmyadmin
+PMA_HOST=
+PMA_PORT=
+
+.env.python
+API_KEY=
+URL_DATA=
+
+start project
+
+create env files and docker compose up -d
+done
