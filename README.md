@@ -15,9 +15,6 @@ In this repository you have :
   <summary>Web - Desktop (click me) 💻</summary>
   <img width="600" alt="img" src="doc/readme/acc1.png">
 
-  <img width="600" alt="img" src="doc/readme/acc4.png">
-  <img width="600" alt="img" src="doc/readme/acc5.png">
-  <img width="600" alt="img" src="doc/readme/acc6.png">
   <img width="600" alt="img" src="doc/readme/acc7.png">
 </details>
 
