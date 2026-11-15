@@ -28,7 +28,7 @@ Complete redesign and rebuild of the 2024 Epitech project. Nothing from the 1.x 
 - No visitor accounts: trips and favourites are kept in the browser ("My space"), with JSON export and import to move them between devices, and a one-click wipe.
 - Sharing by link or QR code: the link carries stops, dates, travel mode and pinned places; nothing is stored on the server.
 - Installable Progressive Web App: localised manifests with shortcuts and screenshots, service worker with offline pages, cached assets and map tiles, offline notice and install button.
-- "Feedback / bug" dialog on every page: pre-filled GitHub issue (page, version, browser) or e-mail to `FEEDBACK_EMAIL`.
+- "Feedback / bug" dialog on every page: pre-filled GitHub issue (page, version, browser) or the author's contact form.
 - Administration "Map data" panel: last rebuild date and size of each source, live progress, and an "Update now" button that rebuilds the OpenStreetMap or DataTourisme index on demand (the current index keeps serving until the swap).
 - Install help for iPhone and iPad, where browsers offer no install prompt.
 - Curated public gallery with filters, sorting and on-device favourites. Administrators sign in with Google (OAuth 2.0 authorization code + PKCE, server-side, no Google script in pages), restricted to `ADMIN_EMAILS`, to publish, unpublish or delete trips; removing an address revokes its session at once.
@@ -60,7 +60,6 @@ Complete redesign and rebuild of the 2024 Epitech project. Nothing from the 1.x 
 - Fixed Google sign-in trusting an email address sent by the browser; ID tokens are now verified server-side.
 - Visitor accounts and passwords are gone entirely: the server holds no visitor data, so there is nothing to leak and no sign-up to abuse. Only administrators have sessions (HttpOnly, SameSite cookies, server-side revocation).
 - Request logs no longer contain headers or cookies; OAuth codes are stripped from logged URLs.
-- The feedback address is sent encoded by the API and never written in the pages (scrapers).
 - Manual data refreshes require a shared secret between backend and geo service (`SERVICE_PASSWORD_GEOADMIN`), on top of the private network.
 - Added rate limiting (sign-in, routing, places), origin checks on state-changing requests, strict security headers and a Content Security Policy without any third-party origin.
 

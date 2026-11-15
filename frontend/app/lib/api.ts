@@ -126,8 +126,6 @@ export interface User {
 export interface PublicConfig {
   version: string;
   google: boolean;
-  /** Feedback address, reversed then base64-encoded (see decodeMailbox). */
-  feedbackMailbox: string | null;
 }
 
 export interface DataSource {
@@ -220,5 +218,3 @@ export const api = {
   },
 };
 
-/** Rebuilds the feedback address only when someone asks for it (kept out of the DOM and of plain JSON). */
-export const decodeMailbox = (encoded: string) => [...new TextDecoder().decode(Uint8Array.from(atob(encoded), (c) => c.charCodeAt(0)))].reverse().join("");

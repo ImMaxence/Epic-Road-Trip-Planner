@@ -60,6 +60,8 @@ describe("config", () => {
     expect(config.secureCookies).toBe(true);
     expect(config.googleEnabled).toBe(false); // the client secret is required too
     expect(config.adminEmails).toEqual(["a@b.fr"]);
+    // Placeholder values required by docker-compose.yml switch Google sign-in off.
+    expect(loadConfig({ JWT_SECRET: "z".repeat(32), GOOGLE_CLIENT_ID: "disabled", GOOGLE_CLIENT_SECRET: "disabled" }).googleEnabled).toBe(false);
   });
 });
 

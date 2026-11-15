@@ -98,7 +98,7 @@ suite("API (MariaDB)", () => {
 
   it("serves health, config and the OpenAPI document", async () => {
     expect((await request(app).get("/api/health")).body).toMatchObject({ status: "ok", database: true });
-    expect((await request(app).get("/api/config")).body).toEqual({ version: "2.0.0", google: true, feedbackMailbox: null });
+    expect((await request(app).get("/api/config")).body).toEqual({ version: "2.0.0", google: true });
     expect((await request(app).get("/api/openapi.json")).body.openapi).toBe("3.1.0");
   });
 

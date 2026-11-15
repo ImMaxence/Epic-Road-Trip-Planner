@@ -115,7 +115,7 @@ test("no visitor accounts; administration is reserved to Google administrators",
   expect(res.status()).toBe(303);
 });
 
-test("feedback dialog offers a pre-filled GitHub issue and an e-mail", async ({ page }) => {
+test("feedback dialog offers a pre-filled GitHub issue and the contact form", async ({ page }) => {
   await page.goto("/en/trips");
   await page.getByRole("button", { name: "Give feedback or report a bug" }).click();
   const dialog = page.getByRole("dialog", { name: "Feedback or a bug?" });
@@ -123,13 +123,7 @@ test("feedback dialog offers a pre-filled GitHub issue and an e-mail", async ({ 
   const href = (await issue.getAttribute("href")) ?? "";
   expect(href).toContain("https://github.com/ImMaxence/Epic-Road-Trip-Planner/issues/new?");
   expect(decodeURIComponent(href.replace(/\+/g, " "))).toContain("/en/trips");
-  const config = await (await page.request.get("/api/config")).json();
-  if (config.feedbackMailbox) {
-    // The address is never written in the page; it is rebuilt on demand.
-    expect(await page.content()).not.toMatch(/[w.+-]+@[w-]+.[w.]+/);
-    await expect(dialog.getByRole("button", { name: "Send an email" })).toBeVisible();
-    await expect(dialog.getByRole("button", { name: "Copy the email address" })).toBeVisible();
-  }
+  await expect(dialog.getByRole("link", { name: /Open the contact form/ })).toHaveAttribute("href", "https://mbonnici.fr/fr/contact");
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
 });

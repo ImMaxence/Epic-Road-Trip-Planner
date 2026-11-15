@@ -70,7 +70,7 @@ export function openApiDocument(version: string, serverUrl: string) {
     },
     paths: {
       "/api/health": { get: { tags: ["meta"], summary: "Liveness and dependency status", responses: { 200: { description: "OK" } } } },
-      "/api/config": { get: { tags: ["meta"], summary: "Public runtime configuration (version, Google admin sign-in, feedback address)", responses: { 200: { description: "OK" } } } },
+      "/api/config": { get: { tags: ["meta"], summary: "Public runtime configuration (version, Google admin sign-in)", responses: { 200: { description: "OK" } } } },
       "/api/auth/me": { get: { tags: ["admin"], summary: "Signed-in administrator (or null)", responses: { 200: { description: "OK", content: json({ type: "object", properties: { user: { oneOf: [ref("Admin"), { type: "null" }] } } }) } } } },
       "/api/auth/google/start": {
         get: { tags: ["admin"], summary: "Administrator sign-in: redirect to Google (OAuth 2.0 authorization code + PKCE)", parameters: [{ in: "query", name: "lang", schema: { enum: ["fr", "en"] } }, { in: "query", name: "next", schema: { type: "string" }, description: "Same-site path to return to" }], responses: { 303: { description: "Redirect to accounts.google.com" } } },

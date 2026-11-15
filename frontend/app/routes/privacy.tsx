@@ -81,10 +81,10 @@ export default function Privacy() {
                 <td>Journaux serveur à rotation automatique ; compteur anti-abus de 15 minutes en mémoire</td>
               </tr>
               <tr>
-                <td>Messages envoyés via « Avis / bug » (e-mail ou ticket GitHub)</td>
+                <td>Messages envoyés via « Avis / bug » (ticket GitHub ou formulaire de contact de mbonnici.fr)</td>
                 <td>Répondre, corriger les bugs, améliorer le service</td>
                 <td>Intérêt légitime (art. 6.1.f)</td>
-                <td>E-mails : 12 mois après le dernier échange. Tickets GitHub : publics, selon vos choix sur GitHub</td>
+                <td>Tickets GitHub : publics, selon vos choix sur GitHub. Formulaire de contact : selon la politique de confidentialité de mbonnici.fr</td>
               </tr>
             </tbody>
           </table>
@@ -211,10 +211,10 @@ export default function Privacy() {
                 <td>Server logs with automatic rotation; 15-minute in-memory anti-abuse counter</td>
               </tr>
               <tr>
-                <td>Messages sent through “Feedback” (email or GitHub issue)</td>
+                <td>Messages sent through “Feedback” (GitHub issue or the mbonnici.fr contact form)</td>
                 <td>Reply, fix bugs, improve the service</td>
                 <td>Legitimate interest (art. 6.1.f)</td>
-                <td>Emails: 12 months after the last exchange. GitHub issues: public, according to your choices on GitHub</td>
+                <td>GitHub issues: public, according to your choices on GitHub. Contact form: according to the mbonnici.fr privacy policy</td>
               </tr>
             </tbody>
           </table>

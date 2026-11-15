@@ -1,6 +1,7 @@
 # Epic Road Trip Planner — production stack (Coolify "Docker Compose" build pack).
 #
 # Coolify generates the SERVICE_USER_* / SERVICE_PASSWORD_* values automatically on first deploy.
+# Required, to fill in Coolify (marked "required" there): ADMIN_EMAILS, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET.
 # Attach your domain to the `web` service (port 80) in the Coolify UI, e.g. https://tripplanner.mbonnici.fr
 # For a local run: cp .env.example .env && docker compose -f docker-compose.yml -f compose.local.yml up -d --build
 
@@ -45,15 +46,13 @@ services:
       OSRM_FOOT_URL: ${OSRM_FOOT_URL:-https://routing.openstreetmap.de/routed-foot}
       # Google OAuth (Web client): administrator sign-in. Visitors have no account.
       # Authorised redirect URI: <PUBLIC_URL>/api/auth/google/callback
-      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
-      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
-      # Administrators: comma-separated e-mails and/or @domains, signed in with Google. Empty = no administration.
-      ADMIN_EMAILS: ${ADMIN_EMAILS:-}
-      # Address offered in the "Feedback / bug" dialog (mailto). Empty = GitHub issues only.
-      FEEDBACK_EMAIL: ${FEEDBACK_EMAIL:-}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:?}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:?}
+      # Administrators: comma-separated e-mails and/or @domains, signed in with Google.
+      ADMIN_EMAILS: ${ADMIN_EMAILS:?}
       LOG_LEVEL: ${LOG_LEVEL:-info}
-      # Set to true only if the domain is proxied by Cloudflare (real client IP for rate limiting).
-      TRUST_CLOUDFLARE: ${TRUST_CLOUDFLARE:-false}
+      # true when the domain is proxied by Cloudflare (real client IP for rate limiting); false otherwise.
+      TRUST_CLOUDFLARE: ${TRUST_CLOUDFLARE:-true}
     depends_on:
       db:
         condition: service_healthy

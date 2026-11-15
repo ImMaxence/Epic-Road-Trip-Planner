@@ -6,6 +6,8 @@ const optional = z
   .string()
   .optional()
   .transform((v) => (v && v.trim() ? v.trim() : undefined));
+/** Like optional, but "disabled" / "none" / "off" also mean "not configured" (required compose variables). */
+const disableable = optional.transform((v) => (v && ["disabled", "none", "off"].includes(v.toLowerCase()) ? undefined : v));
 
 const schema = z.object({
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
@@ -25,12 +27,10 @@ const schema = z.object({
   OSRM_BIKE_URL: z.url().default("https://routing.openstreetmap.de/routed-bike"),
   OSRM_FOOT_URL: z.url().default("https://routing.openstreetmap.de/routed-foot"),
   // Google OAuth 2.0 (authorization code + PKCE). Redirect URI: <PUBLIC_URL>/api/auth/google/callback
-  GOOGLE_CLIENT_ID: optional,
-  GOOGLE_CLIENT_SECRET: optional,
+  GOOGLE_CLIENT_ID: disableable,
+  GOOGLE_CLIENT_SECRET: disableable,
   // Administrators (Google sign-in only): comma/space separated e-mails or whole "@domain" entries. Empty = no admin.
   ADMIN_EMAILS: z.string().default(""),
-  // Shown in the "Feedback / bug" dialog (mailto). Kept out of the repository on purpose.
-  FEEDBACK_EMAIL: z.union([z.email(), z.literal("")]).default(""),
   TRUST_PROXY: z.string().default("loopback, linklocal, uniquelocal"),
   // Only when the domain is proxied by Cloudflare: otherwise CF-Connecting-IP could be forged by clients.
   TRUST_CLOUDFLARE: z.enum(["true", "false"]).default("false").transform((v) => v === "true"),

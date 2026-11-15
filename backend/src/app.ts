@@ -86,9 +86,7 @@ export function createApp(deps: AppDeps) {
 
   api.get("/config", (_req, res) => {
     res.set("Cache-Control", "public, max-age=300");
-    // The feedback address is sent reversed and base64-encoded: never in clear in the page or this JSON (scrapers).
-    const feedbackMailbox = config.FEEDBACK_EMAIL ? Buffer.from([...config.FEEDBACK_EMAIL].reverse().join("")).toString("base64") : null;
-    res.json({ version: config.version, google: Boolean(deps.google), feedbackMailbox });
+    res.json({ version: config.version, google: Boolean(deps.google) });
   });
 
   const spec = openApiDocument(config.version, config.publicOrigin);

@@ -1,12 +1,9 @@
-import { Bug, Copy, Mail, X } from "lucide-react";
+import { Bug, Mail, X } from "lucide-react";
 import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
 import { Button, Dialog, Heading, Modal, ModalOverlay } from "react-aria-components";
 import { useLocation } from "react-router";
 import { useT } from "../i18n";
-import { decodeMailbox } from "../lib/api";
-import { usePublicConfig } from "../lib/auth";
-import { APP_VERSION, REPO_URL } from "../lib/site";
-import { useToast } from "./Toast";
+import { APP_VERSION, OWNER, REPO_URL } from "../lib/site";
 
 const FeedbackContext = createContext<() => void>(() => {});
 
@@ -38,26 +35,11 @@ function browserName(): string {
 function FeedbackDialog({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: (open: boolean) => void }) {
   const t = useT();
   const location = useLocation();
-  const config = usePublicConfig();
-  const toast = useToast();
   if (!isOpen) return null;
 
   const page = `${window.location.origin}${location.pathname}${location.search}`;
   const body = t.feedback.template(page, APP_VERSION, browserName());
   const issueUrl = `${REPO_URL}/issues/new?${new URLSearchParams({ title: t.feedback.issueTitle, body })}`;
-  const mailbox = config.data?.feedbackMailbox ?? null;
-  const writeEmail = () => {
-    window.location.href = `mailto:${decodeMailbox(mailbox!)}?subject=${encodeURIComponent(t.feedback.mailSubject)}&body=${encodeURIComponent(body)}`;
-    onOpenChange(false);
-  };
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(decodeMailbox(mailbox!));
-      toast(t.feedback.emailCopied);
-    } catch {
-      toast(t.auth.errors.generic, "error");
-    }
-  };
 
   return (
     <ModalOverlay className="modal-overlay" isOpen={isOpen} onOpenChange={onOpenChange} isDismissable>
@@ -82,22 +64,15 @@ function FeedbackDialog({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChang
                     {t.feedback.githubButton} <span className="visually-hidden">{t.a11y.externalLink}</span>
                   </a>
                 </section>
-                {mailbox ? (
-                  <section className="feedback__option" aria-labelledby="fb-mail">
-                    <h3 id="fb-mail">
-                      <Mail aria-hidden="true" /> {t.feedback.emailTitle}
-                    </h3>
-                    <p>{t.feedback.emailText}</p>
-                    <div className="button-row">
-                      <button type="button" className="btn" onClick={writeEmail}>
-                        <Mail aria-hidden="true" /> {t.feedback.emailButton}
-                      </button>
-                      <button type="button" className="btn btn--ghost" onClick={() => void copyEmail()}>
-                        <Copy aria-hidden="true" /> {t.feedback.copyEmail}
-                      </button>
-                    </div>
-                  </section>
-                ) : null}
+                <section className="feedback__option" aria-labelledby="fb-contact">
+                  <h3 id="fb-contact">
+                    <Mail aria-hidden="true" /> {t.feedback.contactTitle}
+                  </h3>
+                  <p>{t.feedback.contactText}</p>
+                  <a className="btn" href={OWNER.contact} target="_blank" rel="noopener noreferrer" onClick={close}>
+                    {t.feedback.contactButton} <span className="visually-hidden">{t.a11y.externalLink}</span>
+                  </a>
+                </section>
               </div>
               <p className="field__hint">{t.feedback.context}</p>
             </>
