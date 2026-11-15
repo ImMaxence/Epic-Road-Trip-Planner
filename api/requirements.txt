@@ -1,6 +1,0 @@
-Flask
-pandas
-requests
-schedule
-datetime
-python-dotenv
