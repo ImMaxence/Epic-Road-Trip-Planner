@@ -1,0 +1,37 @@
+# Epic Road Trip
+
+> Free, bilingual (French / English) road trip planner for France. Pick a departure town, a destination and up to 12 stops: the app computes the real route by car, bike or on foot (distance and travel time per leg) and lists places to eat, drink, sleep, explore and refuel around every stop, from OpenStreetMap. Trips can be saved, shared by link, published in a community gallery and printed as a road book (PDF). No ads, no tracking, no account needed to plan. Website: https://tripplanner.mbonnici.fr
+
+Key facts:
+- Coverage: all 34,969 French communes for search (official INSEE data); routing and places optimised for mainland France and Corsica.
+- Data: OpenStreetMap places refreshed monthly, OSRM driving routes, OpenFreeMap basemaps, optional DataTourisme events.
+- Accessibility: built on React Aria, keyboard and screen-reader friendly, partially compliant with RGAA 4.1.2 / WCAG 2.2 AA.
+- Origin: Epitech Marseille team project (2024), fully redesigned in 2026 by Maxence Bonnici. Open source (MIT License).
+
+## Main pages
+
+- [Home (FR)](https://tripplanner.mbonnici.fr/fr): what the planner does, featured itineraries, FAQ
+- [Home (EN)](https://tripplanner.mbonnici.fr/en): English version
+- [Planner (FR)](https://tripplanner.mbonnici.fr/fr/planifier): interactive road trip planner
+- [Planner (EN)](https://tripplanner.mbonnici.fr/en/plan): interactive road trip planner in English
+- [Shared trips (FR)](https://tripplanner.mbonnici.fr/fr/voyages): community and team itineraries (Alps, Loire, Provence, Brittany, Alsace, Basque Country)
+- [About (EN)](https://tripplanner.mbonnici.fr/en/about): project story, team and technology
+
+## Deep links
+
+Planner links can be built directly with official INSEE commune codes:
+`https://tripplanner.mbonnici.fr/en/plan?from=<INSEE>&to=<INSEE>&via=<INSEE>.<INSEE>&start=YYYY-MM-DD&end=YYYY-MM-DD`
+Example, Marseille → Lyon → Paris: https://tripplanner.mbonnici.fr/en/plan?from=13055&to=75056&via=69123
+
+## API
+
+- [OpenAPI document](https://tripplanner.mbonnici.fr/api/openapi.json): public REST API (commune search, routing, points of interest, trips)
+- [API reference](https://tripplanner.mbonnici.fr/api/docs/): interactive Swagger UI
+
+## Optional
+
+- [Full text for language models](https://tripplanner.mbonnici.fr/llms-full.txt)
+- [Legal notice](https://tripplanner.mbonnici.fr/en/legal-notice)
+- [Privacy policy](https://tripplanner.mbonnici.fr/en/privacy)
+- [Accessibility statement](https://tripplanner.mbonnici.fr/en/accessibility)
+- [Source code](https://github.com/ImMaxence/Epic-Road-Trip-Planner)

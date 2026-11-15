@@ -1,0 +1,88 @@
+.print-sheet {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+  body::before,
+  .site-header,
+  .site-footer,
+  .skip-links,
+  .toast-region,
+  .planner__panel,
+  .planner__map,
+  .cta-band,
+  .menu-toggle {
+    display: none !important;
+  }
+  .planner {
+    display: block;
+    height: auto;
+    border: 0;
+  }
+  .print-sheet {
+    display: block;
+    color: #111;
+  }
+  .print-sheet__brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c0311d;
+    margin: 0;
+  }
+  .print-sheet__head h2 {
+    font-size: 26pt;
+    margin: 2mm 0;
+  }
+  .print-sheet__map {
+    width: 100%;
+    max-height: 120mm;
+    object-fit: cover;
+    border: 1px solid #111;
+    margin: 4mm 0;
+  }
+  .print-sheet__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .print-sheet__table th,
+  .print-sheet__table td {
+    border-bottom: 1px solid #999;
+    padding: 2mm;
+    text-align: left;
+    vertical-align: top;
+  }
+  .print-sheet__table tr {
+    break-inside: avoid;
+  }
+  .print-sheet__table ul {
+    margin: 1mm 0 0;
+    padding-left: 5mm;
+    font-size: 9.5pt;
+  }
+  .print-sheet__foot {
+    margin-top: 6mm;
+    font-size: 8.5pt;
+    color: #555;
+  }
+  a {
+    color: #111;
+  }
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+  }
+}

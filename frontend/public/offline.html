@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Hors ligne — Epic Road Trip</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        --paper: #f4eee1;
+        --ink: #1d2433;
+        --ink-2: #434c5e;
+        --red: #c0311d;
+        --blue: #1f4fa8;
+        --yellow: #f2b705;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #14171c;
+          --ink: #f1ebdd;
+          --ink-2: #c9c2b3;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 24px 16px;
+        background: var(--paper);
+        color: var(--ink);
+        font: 1.05rem/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      main {
+        width: min(560px, 100%);
+        display: grid;
+        gap: 22px;
+        justify-items: center;
+        text-align: center;
+      }
+      .sign {
+        width: 100%;
+        padding: 6px;
+        border-radius: 14px;
+        background: var(--yellow);
+        color: #1d2433;
+      }
+      .sign > div {
+        padding: 18px;
+        border: 4px solid #1d2433;
+        border-radius: 9px;
+        font: 800 clamp(1.8rem, 1.2rem + 3vw, 2.8rem) / 1 "Arial Narrow", "Roboto Condensed", sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+      .barrier {
+        width: 100%;
+        height: 38px;
+        border: 3px solid #1d2433;
+        border-radius: 6px;
+        background: repeating-linear-gradient(-45deg, var(--red) 0 24px, #fffaf0 24px 48px);
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 0;
+        color: var(--ink-2);
+      }
+      section + section {
+        padding-top: 18px;
+        border-top: 2px dashed currentColor;
+      }
+      button {
+        min-height: 48px;
+        padding: 0.6rem 1.4rem;
+        border: 2px solid var(--blue);
+        border-radius: 10px;
+        background: var(--blue);
+        color: #fff;
+        font: 700 1.05rem system-ui, sans-serif;
+        cursor: pointer;
+      }
+      button:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 7px var(--yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="sign" aria-hidden="true"><div>Zone sans réseau</div></div>
+      <div class="barrier" aria-hidden="true"></div>
+      <section>
+        <h1>Vous êtes hors ligne</h1>
+        <p>Cette page n'a pas encore été consultée sur cet appareil. Les pages déjà visitées restent disponibles ; la carte, la recherche et l'enregistrement reviendront avec le réseau.</p>
+      </section>
+      <section lang="en">
+        <h2 style="margin: 0; font-size: 1.25rem">You're offline</h2>
+        <p>This page hasn't been opened on this device yet. Pages you've already visited are still available; the map, search and saving will come back with the network.</p>
+      </section>
+      <button type="button" onclick="location.reload()">Réessayer · <span lang="en">Retry</span></button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "epic-road-trip-e2e",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "screenshots": "node screenshots.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.1",
+    "lighthouse": "13.6.0"
+  },
+  "license": "MIT"
+}

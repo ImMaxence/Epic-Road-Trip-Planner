@@ -1,0 +1,4 @@
+Contact: https://mbonnici.fr/fr/contact
+Expires: 2027-11-15T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://tripplanner.mbonnici.fr/.well-known/security.txt

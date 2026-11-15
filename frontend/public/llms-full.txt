@@ -1,0 +1,62 @@
+# Epic Road Trip — full description
+
+Epic Road Trip (https://tripplanner.mbonnici.fr) is a free web application to plan road trips across France, available in French (/fr) and English (/en). It is published by Maxence Bonnici, open source under the MIT License.
+
+## What it does
+
+1. Set your course — choose a departure commune, a destination commune, optional travel dates and up to 12 intermediate stops. Communes are searched in the official list of 34,969 French communes (INSEE / geo.api.gouv.fr), ranked by population and accent-insensitive.
+2. Real route by car, bike or on foot — the route is computed on the matching network (roads, cycle lanes, footpaths) with the open-source OSRM engine. Each leg shows its distance in kilometres and an estimated travel time (excluding traffic and breaks). If routing is unavailable, a clearly labelled straight-line estimate is shown.
+3. Explore every stop — around any stop, within a radius of 2, 5, 10 or 20 km, the planner lists places in six categories:
+   - Eat: restaurants, fast food, bakeries, cheese shops, markets, ice cream
+   - Drinks: bars, pubs, cafés, wineries, breweries, wine shops
+   - Sleep: hotels, guest houses (chambres d'hôtes), hostels, campsites, motorhome areas, holiday cottages, mountain huts
+   - Explore: museums, castles, monuments, viewpoints, attractions, galleries, abbeys, beaches, theatres, nature reserves
+   - Get around: railway and bus stations, ferry terminals, fuel stations, EV charging points, car and bike rental, airfields
+   - Events: dated cultural and sports events from DataTourisme (when the feed is configured)
+   Each place shows its type, distance from the stop, address and, when known, opening hours, cuisine, phone, website and wheelchair access.
+4. Road book — pin places to the trip, save it on the device, share it by link or QR code (the link carries stops, dates, travel mode and pinned places), or print it (A4 road book with map, stops, distances and pinned places; "Save as PDF" in the browser print dialog).
+5. No account — visitors never sign up: trips and favourites are saved in the browser, and can be exported and imported as a file to move them to another device. The "Shared trips" gallery is curated by the publisher, who signs in with Google.
+6. Installable app (PWA) — the site can be installed on a phone or computer; visited pages stay available offline.
+7. Feedback — a "Feedback" button opens a GitHub issue or an email, pre-filled with the page and app version.
+
+## Map
+
+Interactive vector map (MapLibre GL) with three basemaps: "Atlas" (a cream paper style with red motorways and yellow trunk roads, inspired by French paper road atlases), "Day" and "Night". The route colour can be changed (milestone red, direction green, motorway blue, B-road yellow, tourist brown, ink). Stops are drawn as French kilometre milestones ("bornes kilométriques").
+
+## Featured itineraries (team picks)
+
+- The Great Alpine Road (Route des Grandes Alpes): Thonon-les-Bains → La Clusaz → Beaufort → Val-d'Isère → Briançon → Barcelonnette → Saint-Martin-Vésubie → Menton, about 673 km.
+- Loire Valley Châteaux: Orléans → Chambord → Blois → Amboise → Chenonceaux → Tours → Saumur → Angers, about 308 km.
+- Provence & the French Riviera: Avignon → Gordes → Aix-en-Provence → Marseille → Cassis → Saint-Tropez → Nice, about 396 km.
+- Brittany Coast Tour: Saint-Malo → Dinan → Perros-Guirec → Roscoff → Brest → Quimper → Concarneau → Carnac → Vannes, about 532 km.
+- Alsace Wine Route: Marlenheim → Obernai → Barr → Ribeauvillé → Riquewihr → Kaysersberg Vignoble → Colmar → Eguisheim → Thann, about 178 km.
+- Basque Country & Pyrenees: Biarritz → Saint-Jean-de-Luz → Espelette → Saint-Jean-Pied-de-Port → Pau → Lourdes, about 230 km.
+
+## Building planner links
+
+`https://tripplanner.mbonnici.fr/fr/planifier` (French) or `https://tripplanner.mbonnici.fr/en/plan` (English), with query parameters:
+- `from`, `to`: INSEE commune codes (5 characters, e.g. 75056 Paris, 13055 Marseille, 69123 Lyon, 31555 Toulouse, 33063 Bordeaux, 06088 Nice, 44109 Nantes, 67482 Strasbourg)
+- `via`: stops separated by dots, e.g. `via=69123.21231`
+- `start`, `end`: ISO dates `YYYY-MM-DD`
+- `r`: search radius in km (2, 5, 10, 20)
+- `mode`: `car` (default), `bike` or `foot`
+- `style`: `atlas`, `day` or `night`; `color`: `red`, `green`, `blue`, `yellow`, `brown`, `ink`
+
+## Privacy and accessibility
+
+No ads, no analytics, no advertising cookies; a single strictly necessary session cookie when signed in. Trips are private by default; users can export (JSON) or delete all their data. Interface built on React Aria, keyboard and screen-reader friendly, partially compliant with RGAA 4.1.2 / WCAG 2.2 AA; the side panel provides an accessible alternative to the map.
+
+## FAQ
+
+- Is it free? Yes, free, ad-free and without tracking. No account is needed: trips and favourites are saved on the device and shared by link.
+- Where do places come from? OpenStreetMap (refreshed monthly) and, for dated events, DataTourisme, France's national tourism open-data platform.
+- Does it work outside France? Commune search and places cover France; the planner is designed for French road trips.
+- Can I print my trip? Yes, as an A4 road book or a PDF via the browser.
+
+## History
+
+Created in 2024 by Maxence Bonnici, Maxence Laporte, Meriem Boussaid and Federico Suarez at Epitech Marseille; redesigned in 2026 (version 2.0.0) with a new interface, real routing, OpenStreetMap places, secure accounts, English translation, legal pages and accessibility work.
+
+## Public API
+
+REST API documented with OpenAPI 3.1 at https://tripplanner.mbonnici.fr/api/openapi.json (Swagger UI at /api/docs/): commune search (`/api/places/search?q=`), routing (`/api/route?points=lat,lon;lat,lon`), points of interest (`/api/pois?lat=&lon=&radius=`), public trips (`/api/trips`).

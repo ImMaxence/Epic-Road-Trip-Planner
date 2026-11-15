@@ -1,0 +1,516 @@
+[
+ {
+  "title": "La Route des Grandes Alpes",
+  "cover": "mountain",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "74281",
+    "name": "Thonon-les-Bains",
+    "postcode": "74200",
+    "departmentCode": "74",
+    "lat": 46.3745,
+    "lon": 6.4776
+   },
+   "to": {
+    "code": "06083",
+    "name": "Menton",
+    "postcode": "06500",
+    "departmentCode": "06",
+    "lat": 43.7961,
+    "lon": 7.498
+   },
+   "via": [
+    {
+     "code": "74080",
+     "name": "La Clusaz",
+     "postcode": "74220",
+     "departmentCode": "74",
+     "lat": 45.8981,
+     "lon": 6.4654
+    },
+    {
+     "code": "73034",
+     "name": "Beaufort",
+     "postcode": "73270",
+     "departmentCode": "73",
+     "lat": 45.6871,
+     "lon": 6.6024
+    },
+    {
+     "code": "73304",
+     "name": "Val-d'Isère",
+     "postcode": "73150",
+     "departmentCode": "73",
+     "lat": 45.4232,
+     "lon": 7.0151
+    },
+    {
+     "code": "05023",
+     "name": "Briançon",
+     "postcode": "05100",
+     "departmentCode": "05",
+     "lat": 44.8995,
+     "lon": 6.6536
+    },
+    {
+     "code": "04019",
+     "name": "Barcelonnette",
+     "postcode": "04400",
+     "departmentCode": "04",
+     "lat": 44.3751,
+     "lon": 6.6463
+    },
+    {
+     "code": "06127",
+     "name": "Saint-Martin-Vésubie",
+     "postcode": "06450",
+     "departmentCode": "06",
+     "lat": 44.0944,
+     "lon": 7.307
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "La Route des Grandes Alpes",
+    "en": "The Great Alpine Road"
+   },
+   "summary": {
+    "fr": "Du Léman à la Méditerranée par les plus beaux cols des Alpes : Iseran, Izoard, Bonette.",
+    "en": "From Lake Geneva to the Mediterranean over the finest Alpine passes: Iseran, Izoard, Bonette."
+   },
+   "distanceKm": 673,
+   "durationMin": 910
+  }
+ },
+ {
+  "title": "Châteaux de la Loire",
+  "cover": "forest",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "45234",
+    "name": "Orléans",
+    "postcode": "45000",
+    "departmentCode": "45",
+    "lat": 47.8734,
+    "lon": 1.9122
+   },
+   "to": {
+    "code": "49007",
+    "name": "Angers",
+    "postcode": "49000",
+    "departmentCode": "49",
+    "lat": 47.4819,
+    "lon": -0.5629
+   },
+   "via": [
+    {
+     "code": "41034",
+     "name": "Chambord",
+     "postcode": "41250",
+     "departmentCode": "41",
+     "lat": 47.6208,
+     "lon": 1.5374
+    },
+    {
+     "code": "41018",
+     "name": "Blois",
+     "postcode": "41000",
+     "departmentCode": "41",
+     "lat": 47.5813,
+     "lon": 1.3049
+    },
+    {
+     "code": "37003",
+     "name": "Amboise",
+     "postcode": "37400",
+     "departmentCode": "37",
+     "lat": 47.3967,
+     "lon": 0.9989
+    },
+    {
+     "code": "37070",
+     "name": "Chenonceaux",
+     "postcode": "37150",
+     "departmentCode": "37",
+     "lat": 47.3436,
+     "lon": 1.0701
+    },
+    {
+     "code": "37261",
+     "name": "Tours",
+     "postcode": "37000",
+     "departmentCode": "37",
+     "lat": 47.3943,
+     "lon": 0.6949
+    },
+    {
+     "code": "49328",
+     "name": "Saumur",
+     "postcode": "49400",
+     "departmentCode": "49",
+     "lat": 47.2645,
+     "lon": -0.0837
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "Châteaux de la Loire",
+    "en": "Loire Valley Châteaux"
+   },
+   "summary": {
+    "fr": "Chambord, Blois, Amboise, Chenonceau : la vallée des rois à rythme tranquille, entre vignes et levées.",
+    "en": "Chambord, Blois, Amboise, Chenonceau: the valley of kings at a gentle pace, between vineyards and levees."
+   },
+   "distanceKm": 308,
+   "durationMin": 298
+  }
+ },
+ {
+  "title": "Provence et Côte d'Azur",
+  "cover": "beach",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "84007",
+    "name": "Avignon",
+    "postcode": "84000",
+    "departmentCode": "84",
+    "lat": 43.9416,
+    "lon": 4.8333
+   },
+   "to": {
+    "code": "06088",
+    "name": "Nice",
+    "postcode": "06000",
+    "departmentCode": "06",
+    "lat": 43.7032,
+    "lon": 7.2528
+   },
+   "via": [
+    {
+     "code": "84050",
+     "name": "Gordes",
+     "postcode": "84220",
+     "departmentCode": "84",
+     "lat": 43.9074,
+     "lon": 5.204
+    },
+    {
+     "code": "13001",
+     "name": "Aix-en-Provence",
+     "postcode": "13080",
+     "departmentCode": "13",
+     "lat": 43.536,
+     "lon": 5.3879
+    },
+    {
+     "code": "13055",
+     "name": "Marseille",
+     "postcode": "13001",
+     "departmentCode": "13",
+     "lat": 43.2803,
+     "lon": 5.3806
+    },
+    {
+     "code": "13022",
+     "name": "Cassis",
+     "postcode": "13260",
+     "departmentCode": "13",
+     "lat": 43.2185,
+     "lon": 5.5503
+    },
+    {
+     "code": "83119",
+     "name": "Saint-Tropez",
+     "postcode": "83990",
+     "departmentCode": "83",
+     "lat": 43.2619,
+     "lon": 6.6638
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "Provence et Côte d'Azur",
+    "en": "Provence & the French Riviera"
+   },
+   "summary": {
+    "fr": "Des remparts d'Avignon aux calanques de Cassis, puis la corniche jusqu'à Nice.",
+    "en": "From the walls of Avignon to the calanques of Cassis, then the coast road to Nice."
+   },
+   "distanceKm": 396.1,
+   "durationMin": 375
+  }
+ },
+ {
+  "title": "Tour de Bretagne",
+  "cover": "beach",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "35288",
+    "name": "Saint-Malo",
+    "postcode": "35400",
+    "departmentCode": "35",
+    "lat": 48.6465,
+    "lon": -2.0066
+   },
+   "to": {
+    "code": "56260",
+    "name": "Vannes",
+    "postcode": "56000",
+    "departmentCode": "56",
+    "lat": 47.6577,
+    "lon": -2.7485
+   },
+   "via": [
+    {
+     "code": "22050",
+     "name": "Dinan",
+     "postcode": "22100",
+     "departmentCode": "22",
+     "lat": 48.4471,
+     "lon": -2.0533
+    },
+    {
+     "code": "22168",
+     "name": "Perros-Guirec",
+     "postcode": "22700",
+     "departmentCode": "22",
+     "lat": 48.8376,
+     "lon": -3.476
+    },
+    {
+     "code": "29239",
+     "name": "Roscoff",
+     "postcode": "29680",
+     "departmentCode": "29",
+     "lat": 48.7135,
+     "lon": -3.9866
+    },
+    {
+     "code": "29019",
+     "name": "Brest",
+     "postcode": "29200",
+     "departmentCode": "29",
+     "lat": 48.4085,
+     "lon": -4.4996
+    },
+    {
+     "code": "29232",
+     "name": "Quimper",
+     "postcode": "29000",
+     "departmentCode": "29",
+     "lat": 47.9982,
+     "lon": -4.0972
+    },
+    {
+     "code": "29039",
+     "name": "Concarneau",
+     "postcode": "29900",
+     "departmentCode": "29",
+     "lat": 47.8977,
+     "lon": -3.8993
+    },
+    {
+     "code": "56034",
+     "name": "Carnac",
+     "postcode": "56340",
+     "departmentCode": "56",
+     "lat": 47.6034,
+     "lon": -3.0664
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "Tour de Bretagne",
+    "en": "Brittany Coast Tour"
+   },
+   "summary": {
+    "fr": "Côte d'Émeraude, granit rose et Finistère : la Bretagne par ses ports et ses phares.",
+    "en": "Emerald Coast, pink granite and Finistère: Brittany through its harbours and lighthouses."
+   },
+   "distanceKm": 532,
+   "durationMin": 471
+  }
+ },
+ {
+  "title": "Route des vins d'Alsace",
+  "cover": "city",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "67282",
+    "name": "Marlenheim",
+    "postcode": "67520",
+    "departmentCode": "67",
+    "lat": 48.6209,
+    "lon": 7.5016
+   },
+   "to": {
+    "code": "68334",
+    "name": "Thann",
+    "postcode": "68800",
+    "departmentCode": "68",
+    "lat": 47.8163,
+    "lon": 7.0867
+   },
+   "via": [
+    {
+     "code": "67348",
+     "name": "Obernai",
+     "postcode": "67210",
+     "departmentCode": "67",
+     "lat": 48.4546,
+     "lon": 7.4817
+    },
+    {
+     "code": "67021",
+     "name": "Barr",
+     "postcode": "67140",
+     "departmentCode": "67",
+     "lat": 48.4136,
+     "lon": 7.3988
+    },
+    {
+     "code": "68269",
+     "name": "Ribeauvillé",
+     "postcode": "68150",
+     "departmentCode": "68",
+     "lat": 48.2056,
+     "lon": 7.2942
+    },
+    {
+     "code": "68277",
+     "name": "Riquewihr",
+     "postcode": "68340",
+     "departmentCode": "68",
+     "lat": 48.1793,
+     "lon": 7.2689
+    },
+    {
+     "code": "68162",
+     "name": "Kaysersberg Vignoble",
+     "postcode": "68240",
+     "departmentCode": "68",
+     "lat": 48.1547,
+     "lon": 7.276
+    },
+    {
+     "code": "68066",
+     "name": "Colmar",
+     "postcode": "68000",
+     "departmentCode": "68",
+     "lat": 48.1115,
+     "lon": 7.3924
+    },
+    {
+     "code": "68078",
+     "name": "Eguisheim",
+     "postcode": "68420",
+     "departmentCode": "68",
+     "lat": 48.0377,
+     "lon": 7.2966
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "Route des vins d'Alsace",
+    "en": "Alsace Wine Route"
+   },
+   "summary": {
+    "fr": "Villages fleuris, winstubs et grands crus au pied des Vosges, de Marlenheim à Thann.",
+    "en": "Flower-filled villages, winstubs and grand cru vineyards below the Vosges, from Marlenheim to Thann."
+   },
+   "distanceKm": 178.3,
+   "durationMin": 358
+  }
+ },
+ {
+  "title": "Pays basque et Pyrénées",
+  "cover": "campfire",
+  "plan": {
+   "version": 1,
+   "from": {
+    "code": "64122",
+    "name": "Biarritz",
+    "postcode": "64200",
+    "departmentCode": "64",
+    "lat": 43.4709,
+    "lon": -1.5557
+   },
+   "to": {
+    "code": "65286",
+    "name": "Lourdes",
+    "postcode": "65100",
+    "departmentCode": "65",
+    "lat": 43.109,
+    "lon": -0.0806
+   },
+   "via": [
+    {
+     "code": "64483",
+     "name": "Saint-Jean-de-Luz",
+     "postcode": "64500",
+     "departmentCode": "64",
+     "lat": 43.3934,
+     "lon": -1.6337
+    },
+    {
+     "code": "64213",
+     "name": "Espelette",
+     "postcode": "64250",
+     "departmentCode": "64",
+     "lat": 43.3226,
+     "lon": -1.4521
+    },
+    {
+     "code": "64485",
+     "name": "Saint-Jean-Pied-de-Port",
+     "postcode": "64220",
+     "departmentCode": "64",
+     "lat": 43.157,
+     "lon": -1.2338
+    },
+    {
+     "code": "64445",
+     "name": "Pau",
+     "postcode": "64000",
+     "departmentCode": "64",
+     "lat": 43.3219,
+     "lon": -0.3435
+    }
+   ],
+   "mapStyle": "atlas",
+   "routeColor": "red",
+   "radiusKm": 5,
+   "pins": [],
+   "titles": {
+    "fr": "Pays basque et Pyrénées",
+    "en": "Basque Country & Pyrenees"
+   },
+   "summary": {
+    "fr": "Vagues de Biarritz, piments d'Espelette et contreforts pyrénéens jusqu'à Lourdes.",
+    "en": "Biarritz surf, Espelette peppers and Pyrenean foothills all the way to Lourdes."
+   },
+   "distanceKm": 230.1,
+   "durationMin": 230
+  }
+ }
+]

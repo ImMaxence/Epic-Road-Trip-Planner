@@ -1,0 +1,31 @@
+# Epic Road Trip — https://tripplanner.mbonnici.fr
+# Search engines and AI assistants are welcome to read and cite the public pages.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Allow: /api/docs/
+Allow: /api/openapi.json
+
+# AI crawlers and assistants (training, search and user-triggered fetches)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: CCBot
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /api/
+Allow: /api/docs/
+Allow: /api/openapi.json
+
+Sitemap: https://tripplanner.mbonnici.fr/sitemap.xml

@@ -1,0 +1,30 @@
+{
+  "id": "/",
+  "name": "Epic Road Trip — Planificateur de road trips en France",
+  "short_name": "Epic Road Trip",
+  "description": "Planifiez un road trip en France étape par étape : itinéraire en voiture, à vélo ou à pied, lieux où manger, dormir et sortir, carnet imprimable.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/fr",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f4eee1",
+  "theme_color": "#c0311d",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Planifier un voyage", "short_name": "Planifier", "url": "/fr/planifier", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Voyages partagés", "short_name": "Voyages", "url": "/fr/voyages", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Mon espace", "short_name": "Mon espace", "url": "/fr/profil", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/planner-wide.webp", "sizes": "1440x900", "type": "image/webp", "form_factor": "wide", "label": "Carnet de route : itinéraire et lieux à chaque étape" },
+    { "src": "/screenshots/planner-narrow.webp", "sizes": "780x1688", "type": "image/webp", "form_factor": "narrow", "label": "Le planificateur sur mobile" }
+  ]
+}

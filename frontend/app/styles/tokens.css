@@ -1,0 +1,131 @@
+/* Design tokens — "Atlas routier" : road-atlas paper, French road signage, milestone red. */
+:root {
+  color-scheme: light;
+
+  /* Paper & ink */
+  --paper: #f4eee1;
+  --paper-2: #ebe2cf;
+  --paper-3: #ddd0b4;
+  --card: #fbf8f1;
+  --ink: #1d2433;
+  --ink-2: #434c5e;
+  --ink-soft: rgb(29 36 51 / 0.72);
+  --line: rgb(29 36 51 / 0.16);
+  --line-strong: rgb(29 36 51 / 0.55);
+  --link: #a3281a;
+  --link-hover: #7d1c11;
+  --mark: #f2b705;
+
+  /* Road signage (fills keep white or ink text in every theme) */
+  --sign-red: #c0311d;
+  --sign-green: #0b6b47;
+  --sign-blue: #1f4fa8;
+  --sign-brown: #6f4325;
+  --sign-yellow: #f2b705;
+  --sign-plum: #7d2e6e;
+  --sign-amber: #8a5a00;
+  --sign-white: #ffffff;
+  --on-sign: #ffffff;
+  --on-yellow: #1d2433;
+
+  /* Categories (fills with white text, AA compliant) */
+  --cat-eat: #b8381f;
+  --cat-drink: #7d2e6e;
+  --cat-sleep: #1f4fa8;
+  --cat-enjoy: #6f4325;
+  --cat-travel: #0b6b47;
+  --cat-events: #8a5a00;
+
+  --asphalt: #23272f;
+  --asphalt-2: #2d323c;
+  --on-asphalt: #f1ebdd;
+  --on-asphalt-2: #c9c2b3;
+
+  --focus-ring: #1d2433;
+  --focus-halo: #f2b705;
+
+  --success: #0b6b47;
+  --danger: #b3261e;
+  --info: #1f4fa8;
+
+  /* Type */
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --step--1: clamp(0.84rem, 0.82rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.075rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.35vw, 1.4rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.7vw, 1.9rem);
+  --step-3: clamp(1.9rem, 1.6rem + 1.4vw, 2.8rem);
+  --step-4: clamp(2.4rem, 1.9rem + 2.6vw, 4.2rem);
+  --step-5: clamp(3.2rem, 2.2rem + 5vw, 7.4rem);
+
+  /* Space & shape */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --radius-1: 6px;
+  --radius-2: 10px;
+  --radius-3: 16px;
+  --radius-pill: 999px;
+  --shadow-1: 0 1px 0 rgb(29 36 51 / 0.06), 0 8px 20px -12px rgb(29 36 51 / 0.35);
+  --shadow-2: 0 2px 0 rgb(29 36 51 / 0.08), 0 22px 40px -22px rgb(29 36 51 / 0.45);
+  --header-h: 68px;
+  --container: 1200px;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+
+  --grain-opacity: 0.2;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Night drive: asphalt background, retro-reflective signs keep their colours. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14171c;
+  --paper-2: #1b1f26;
+  --paper-3: #262b34;
+  --card: #1a1e25;
+  --ink: #f1ebdd;
+  --ink-2: #c9c2b3;
+  --ink-soft: rgb(241 235 221 / 0.75);
+  --line: rgb(241 235 221 / 0.14);
+  --line-strong: rgb(241 235 221 / 0.5);
+  --link: #ff9b85;
+  --link-hover: #ffc2b4;
+  --asphalt: #0d0f13;
+  --asphalt-2: #171a20;
+  --focus-ring: #f1ebdd;
+  --grain-opacity: 0.12;
+  --shadow-1: 0 1px 0 rgb(0 0 0 / 0.4), 0 10px 24px -14px rgb(0 0 0 / 0.8);
+  --shadow-2: 0 2px 0 rgb(0 0 0 / 0.4), 0 24px 44px -20px rgb(0 0 0 / 0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14171c;
+    --paper-2: #1b1f26;
+    --paper-3: #262b34;
+    --card: #1a1e25;
+    --ink: #f1ebdd;
+    --ink-2: #c9c2b3;
+    --ink-soft: rgb(241 235 221 / 0.75);
+    --line: rgb(241 235 221 / 0.14);
+    --line-strong: rgb(241 235 221 / 0.5);
+    --link: #ff9b85;
+    --link-hover: #ffc2b4;
+    --asphalt: #0d0f13;
+    --asphalt-2: #171a20;
+    --focus-ring: #f1ebdd;
+    --grain-opacity: 0.12;
+    --shadow-1: 0 1px 0 rgb(0 0 0 / 0.4), 0 10px 24px -14px rgb(0 0 0 / 0.8);
+    --shadow-2: 0 2px 0 rgb(0 0 0 / 0.4), 0 24px 44px -20px rgb(0 0 0 / 0.9);
+  }
+}

@@ -1,0 +1,10 @@
+[
+    "Rental",
+    "NonHousingRealEstateRental",
+    "HouseBoat",
+    "AccommodationProduct",
+    "Accommodation",
+    "schema:Accommodation",
+    "schema:LodgingBusiness",
+    "RentalAccommodation"
+]
