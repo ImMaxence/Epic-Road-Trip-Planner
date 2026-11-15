@@ -449,6 +449,44 @@
   font-size: 1.05rem;
   letter-spacing: 0;
 }
+/* Same look in both themes; overrides the ghost button hover (dark --paper-2 in night mode). */
+.btn.google-btn:hover,
+.btn.google-btn[data-hovered],
+.btn.google-btn:focus-visible {
+  background: #eef0f1;
+  border-color: #5f6368;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+.btn.google-btn:active {
+  background: #e2e5e7;
+}
+
+/* "My space": entry point to the administration for the site owner */
+.admin-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  max-width: 760px;
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--line-strong);
+  border-radius: var(--radius-2);
+  background: var(--card);
+}
+.admin-entry > svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--info);
+}
+.page-head .admin-entry p {
+  flex: 1 1 240px;
+  margin: 0;
+  font-size: var(--step-0);
+  color: var(--ink);
+}
 .info-banner {
   margin-bottom: var(--space-5);
 }

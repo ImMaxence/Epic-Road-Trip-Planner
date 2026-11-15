@@ -2,12 +2,13 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Download, Info, Plus, ShieldCheck, Smartphone, Upload } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, type MetaFunction } from "react-router";
+import { GoogleMark } from "../components/GoogleMark";
 import { useInstall } from "../components/Install";
 import { useToast } from "../components/Toast";
 import { TripCard } from "../components/TripCard";
 import { DICTS, langFromPath, useHref, useLang, useT } from "../i18n";
 import { api, type TripSummary } from "../lib/api";
-import { useAuth } from "../lib/auth";
+import { useAuth, usePublicConfig } from "../lib/auth";
 import { downloadText, localStore, useLocalFavorites, useLocalTrips, type LocalTrip } from "../lib/local-store";
 import { seo } from "../lib/seo";
 
@@ -77,6 +78,7 @@ export default function Profile() {
   const href = useHref();
   const toast = useToast();
   const { user } = useAuth();
+  const config = usePublicConfig();
   const trips = useLocalTrips();
   const favoriteIds = useLocalFavorites();
   const fileInput = useRef<HTMLInputElement>(null);
@@ -112,6 +114,15 @@ export default function Profile() {
       <div className="container page-head">
         <h1>{t.profile.title}</h1>
         <p>{t.profile.localLead}</p>
+        {!user && config.data?.google ? (
+          <div className="admin-entry">
+            <ShieldCheck aria-hidden="true" />
+            <p>{t.profile.adminEntry}</p>
+            <a className="btn btn--ghost btn--small google-btn" href={api.googleStartUrl(lang, href("admin"))}>
+              <GoogleMark /> {t.auth.adminGoogle}
+            </a>
+          </div>
+        ) : null}
         {user ? (
           <div className="notice notice--info info-banner">
             <ShieldCheck aria-hidden="true" />

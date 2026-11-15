@@ -320,6 +320,7 @@ export const fr = {
     title: "Mon espace",
     localLead: "Vos voyages et favoris sont conservés dans ce navigateur, sans compte. Rien n'est envoyé au serveur.",
     adminBanner: (name: string) => `Connecté·e en administrateur : ${name}. Les voyages enregistrés depuis le planificateur vont sur le serveur et peuvent être publiés.`,
+    adminEntry: "Vous êtes l'éditeur du site ? Connectez-vous pour gérer la galerie et les données de la carte.",
     adminLink: "Ouvrir l'administration",
     uploadToServer: (n: number) => (n > 1 ? `Envoyer ces ${n} voyages sur le serveur` : "Envoyer ce voyage sur le serveur"),
     imported: (n: number) => (n > 1 ? `${n} voyages envoyés sur le serveur.` : n === 1 ? "1 voyage envoyé sur le serveur." : "Aucun voyage envoyé."),

@@ -322,6 +322,7 @@ export const en: Dict = {
     title: "My space",
     localLead: "Your trips and favourites are kept in this browser, with no account. Nothing is sent to the server.",
     adminBanner: (name: string) => `Signed in as administrator: ${name}. Trips saved from the planner go to the server and can be published.`,
+    adminEntry: "Running this site? Sign in to manage the gallery and the map data.",
     adminLink: "Open the administration",
     uploadToServer: (n: number) => (n > 1 ? `Send these ${n} trips to the server` : "Send this trip to the server"),
     imported: (n: number) => (n > 1 ? `${n} trips sent to the server.` : n === 1 ? "1 trip sent to the server." : "No trip sent."),
